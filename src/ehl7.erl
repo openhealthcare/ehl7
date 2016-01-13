@@ -26,12 +26,12 @@
 
 -type field()                                   :: binary() | integer() | calendar:date() | calendar:datetime() | float() | undefined.
 -type segment_id()                              :: atom().
--type segment()                                 :: tuple(segment_id() | field()).
+-type segment()                                 :: {segment_id() | field()}.
 -type msg()                                     :: [segment()].
 
 -type raw_field()                               :: binary() | tuple() | undefined.
 -type raw_segment_id()                          :: binary().
--type raw_segment()                             :: tuple(raw_segment_id() | raw_field()).
+-type raw_segment()                             :: {raw_segment_id() | raw_field()}.
 -type raw_msg()                                 :: [raw_segment()].
 
 -type buffer()                                  :: binary().
